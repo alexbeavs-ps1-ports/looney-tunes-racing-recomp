@@ -1,0 +1,48 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "Looney Tunes Racing",
+    "id": "SLUS-01145",
+    "boot_exe": "SLUS_011.45"
+  },
+  "marketing": {
+    "description": "",
+    "publisher": "",
+    "year": "",
+    "region": "USA",
+    "players": 1
+  },
+  "rom_identity": {
+    "cue_name": "Looney Tunes Racing (USA) (En,Fr,Es).cue",
+    "bin_name": "Looney Tunes Racing (USA) (En,Fr,Es).bin",
+    "track_counts": [
+      1
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 454836816,
+      "md5": "244aebf9c4f353c3be91441886da1043",
+      "sha1": "7b3da33269302c899fcc8ac950d68b18c0f4cce6",
+      "crc32": "165274db"
+    },
+    "disc_fp": "23f7699eb1d599035803f0603ff723ee34ed39f4055baf43b574f71c357058e9"
+  },
+  "exe": {
+    "load_address": "0x80010000",
+    "entry_pc": "0x8007FF1C",
+    "text_size": "0x000B2000",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 1295,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [
+    "cue has only 1 TRACK — Track-01-only dumps fail multi-track netplay/catalog gates; prefer a full Redump cue."
+  ],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

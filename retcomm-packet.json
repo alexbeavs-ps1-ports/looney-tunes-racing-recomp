@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "id": "looney-tunes-racing-psx",
+  "name": "Looney Tunes Racing",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "looney-tunes-racing-recomp",
+  "rom_identity": {
+    "crc32": [
+      "165274db"
+    ],
+    "md5": [
+      "244aebf9c4f353c3be91441886da1043"
+    ],
+    "sha1": [
+      "7b3da33269302c899fcc8ac950d68b18c0f4cce6"
+    ],
+    "disc_serials": [
+      "SLUS-01145"
+    ],
+    "sizes": [
+      454836816
+    ],
+    "filenames": [
+      "Looney Tunes Racing (USA) (En,Fr,Es).cue",
+      "Looney Tunes Racing (USA) (En,Fr,Es).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "disc_fps": [
+      "23f7699eb1d599035803f0603ff723ee34ed39f4055baf43b574f71c357058e9"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH1001.BIN",
+    "profile": "SCPH1001",
+    "crc32": [
+      "37157331"
+    ],
+    "md5": [
+      "924e392ed05558ffdb115408c263dccf"
+    ],
+    "sha1": [
+      "10155d8d6e6e832d6ea66db9bc098321fb5e8ebf"
+    ],
+    "sha256": [
+      "71af94d1e47a68c11e8fdb9f8368040601514a42a5a399cda48c7d3bff1e99d3"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH1001.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/looney-tunes-racing-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "looney-tunes-racing-*-windows-x64.zip",
+      "linux-x64": "looney-tunes-racing-*-linux-x64.zip",
+      "macos-arm64": "looney-tunes-racing-*-macos-arm64.zip",
+      "macos-x64": "looney-tunes-racing-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "looney_tunes_racing.exe",
+    "linux": "looney_tunes_racing",
+    "macos": "looney_tunes_racing"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/looney-tunes-racing-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}
